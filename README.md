@@ -2,9 +2,9 @@
 
 Bu kod, uçak bileti fiyatını sorgulamak için bir API kullanır. İstek parametreleri olarak kalkış yeri, varış yeri ve tarih gönderilir ve API, bilet fiyatını döndürür.
 
-Yapımcı: Emre Karademir
-Web Sitesi: https://emrekarademir.com/
-E-posta: social@emrekarademir.com
+- Yapımcı: Emre Karademir
+- Web Sitesi: https://emrekarademir.com/
+- E-posta: social@emrekarademir.com
 
 ## Gereksinimler
 
@@ -17,31 +17,31 @@ E-posta: social@emrekarademir.com
 
 Python için:
 
-pip install requests
+- pip install requests
 
 
 PHP için:
 
 <?php
 
-// API endpoint
+-  API endpoint
 $url = "https://api.sample.com/flights/search";
 
-// İstek parametreleri
+-  İstek parametreleri
 $params = array(
     "origin" => "IST",
     "destination" => "DXB",
     "date" => "2023-03-10"
 );
 
-// API isteğini yap
+-  API isteğini yap
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_URL, $url . "?" . http_build_query($params));
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($curl);
 curl_close($curl);
 
-// API cevabını kontrol et
+-  API cevabını kontrol et
 if ($response !== false) {
     // API cevabını JSON formatına dönüştür
     $data = json_decode($response, true);
@@ -56,10 +56,10 @@ if ($response !== false) {
 }
 ```
 
-Python için:
+- Python için:
 
 ```
-import requests
+- import requests
 
 # API endpoint
 url = "https://api.sample.com/flights/search"
